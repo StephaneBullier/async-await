@@ -8,12 +8,13 @@ export const displayPosts = async () => {
     posts = await getPosts()
 
     for (let post of posts) {
-      appHtml.innerHTML += `
-        <div>
-          <h2>${post.title}</h2>
-          <p>${post.body}</p>
-        </div>
-        `
+        appHtml.insertAdjacentHTML('beforeend', `
+                                                  <div>
+                                                    <h2>${post.title}</h2>
+                                                    <p>${post.body}</p>
+                                                  </div>
+                                                `
+                                  )
     }
   } catch (error) {
     console.error(error.message)
