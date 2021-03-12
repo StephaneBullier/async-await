@@ -6,6 +6,7 @@ export const displayPosts = async () => {
 
   try {
     posts = await getPosts()
+
     for (let post of posts) {
       appHtml.innerHTML += `
         <div>
@@ -15,6 +16,6 @@ export const displayPosts = async () => {
         `
     }
   } catch (error) {
-    console.error(error)
+    console.error(error.message)
   }
 }
