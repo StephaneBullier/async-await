@@ -1,3 +1,1 @@
-export const getPosts = async () => {
-  return (await fetch('https://jsonplaceholder.typicode.com/posts')).json()
-}
+export const getPosts = async () => (await fetch('https://jsonplaceholder.typicode.com/posts')).json()
